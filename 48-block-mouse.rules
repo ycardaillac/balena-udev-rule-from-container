@@ -1,0 +1,3 @@
+SUBSYSTEM=="usb", ATTR{bDeviceClass}=="00", \
+    ATTRS{bInterfaceClass}=="03", \
+    RUN+="/bin/sh -c 'echo 0 > /sys$env{DEVPATH%/*}/authorized'"

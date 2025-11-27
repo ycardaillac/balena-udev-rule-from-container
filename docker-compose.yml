@@ -1,0 +1,10 @@
+version: '2'
+
+services:
+
+  set-udev-rule:
+    build: .
+    privileged: true
+    volumes:
+      # Mount host /sys to access device authorization paths (rw needed to write authorized files)
+      - /sys:/sys:rw
