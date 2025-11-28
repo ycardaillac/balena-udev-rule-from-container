@@ -1,6 +1,6 @@
 FROM alpine:latest
 
-COPY 48-block-mouse.rules /etc/udev/rules.d/48-block-mouse.rules
+COPY 48-usb-hid.rules /etc/udev/rules.d/48-usb-hid.rules
 
 COPY block-hid.sh /usr/bin/block-hid.sh
 RUN chmod +x /usr/bin/block-hid.sh
