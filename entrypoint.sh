@@ -16,5 +16,8 @@ setup_devtmpfs() {
 # Run setup before anything else
 setup_devtmpfs
 
+# Start udevd daemon in background
+udevd --daemon
+
 # Execute the main command
 exec "$@"
