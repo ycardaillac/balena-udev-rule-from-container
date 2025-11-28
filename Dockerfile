@@ -4,6 +4,9 @@ ENV UDEV=on
 
 COPY 48-block-mouse.rules /etc/udev/rules.d/48-block-mouse.rules
 
+COPY block-hid.sh /usr/bin/block-hid.sh
+RUN chmod +x /usr/bin/block-hid.sh
+
 COPY idle.sh /usr/src/scripts/idle.sh
 RUN chmod a+x /usr/src/scripts/idle.sh
 
